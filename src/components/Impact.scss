@@ -39,11 +39,12 @@
         height: 3.5rem;
         border-radius: 50%;
         background: #e3f2e2;
+        font-size: 2rem;
 
         margin-bottom: 2.5rem;
         @include flex-center;
 
-        img {
+        svg {
           width: 2rem;
           mix-blend-mode: soft-light;
         }

@@ -1,4 +1,5 @@
 import './Action.scss';
+import { IoIosStarHalf } from 'react-icons/io';
 
 const Action = () => {
   return (
@@ -9,7 +10,7 @@ const Action = () => {
         </div>
         <div className="rating">
           <div className="icon">
-            <img src="/img/icons/globe.svg" alt="Star Icon" />
+            <IoIosStarHalf />
           </div>
           <div className="text">
             <h2>4.5</h2>

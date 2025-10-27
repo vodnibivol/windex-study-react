@@ -1,17 +1,16 @@
 import ProjectItem from './ProjectItem';
 import './Projects.scss';
+import Select from './Select';
 
 const Projects = () => {
+  const categories = ['All', 'Offshore Wind Farms', 'Onshore Wind Farms'];
+
   return (
     <div className="projects">
       <h3 className="text-gray upper">See All Projects</h3>
       <div className="title">
         <h1>Diverse Solutions For Every Need</h1>
-        <div className="select">
-          <div className="select-item text-gray upper selected">All</div>
-          <div className="select-item text-gray upper">Offshore Wind Farms</div>
-          <div className="select-item text-gray upper">Onshore Wind Farms</div>
-        </div>
+        <Select categories={categories} />
       </div>
       <div className="project-grid">
         <ProjectItem image="turbines-4" category="Onshore Wind Farms" title="Blue Ridge Energy Park" />

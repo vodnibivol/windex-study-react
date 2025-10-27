@@ -9,10 +9,18 @@ const Navbar = () => {
           <span>Windex</span>
         </div>
         <div className="links">
-          <a href="/home">Home</a>
-          <a href="/about">About</a>
-          <a href="/solutions">Solutions</a>
-          <a href="/projects">Projects</a>
+          <a href="/home" className="underline-hover">
+            Home
+          </a>
+          <a href="/about" className="underline-hover">
+            About
+          </a>
+          <a href="/solutions" className="underline-hover">
+            Solutions
+          </a>
+          <a href="/projects" className="underline-hover">
+            Projects
+          </a>
         </div>
       </div>
       <div className="nav-right">

@@ -22,6 +22,15 @@ footer {
       li {
         margin: 1rem 0;
         line-height: 1.8;
+        position: relative;
+
+        svg {
+          font-size: 1.5rem;
+          position: absolute;
+          left: -1.5rem;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
     }
   }
@@ -43,6 +52,8 @@ footer {
     .links-social {
       display: flex;
       gap: 1.5rem;
+      font-size: 1.5rem;
+      line-height: 0;
     }
   }
 

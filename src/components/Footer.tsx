@@ -1,30 +1,59 @@
 import './Footer.scss';
 
+import {
+  BiEnvelope,
+  BiLogoFacebookCircle,
+  BiLogoInstagramAlt,
+  BiLogoLinkedinSquare,
+  BiLogoTwitter,
+  BiMap,
+  BiPhone,
+} from 'react-icons/bi';
+
 const Footer = () => {
   return (
     <footer>
       <div className="top">
         <h1>Ready to Go Green With Wind Power?</h1>
         <ul className="contact-list">
-          <li>4516 Washington Ave. Manchester, Kentucky 39495</li>
-          <li>info@windexco.com</li>
-          <li>(217) 555-0113</li>
+          <li>
+            <BiMap />
+            <span>4516 Washington Ave. Manchester, Kentucky 39495</span>
+          </li>
+          <li>
+            <BiEnvelope />
+            <span>info@windexco.com</span>
+          </li>
+          <li>
+            <BiPhone />
+            <span>(217) 555-0113</span>
+          </li>
         </ul>
       </div>
 
       <div className="middle">
         <div className="links-nav">
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Solutions</a>
-          <a href="/">Projects</a>
-          <a href="/">Blog</a>
+          <a href="/" className="underline-hover">
+            Home
+          </a>
+          <a href="/" className="underline-hover">
+            About
+          </a>
+          <a href="/" className="underline-hover">
+            Solutions
+          </a>
+          <a href="/" className="underline-hover">
+            Projects
+          </a>
+          <a href="/" className="underline-hover">
+            Blog
+          </a>
         </div>
         <div className="links-social">
-          <i>fb</i>
-          <i>insta</i>
-          <i>linkedin</i>
-          <i>x</i>
+          <BiLogoFacebookCircle />
+          <BiLogoInstagramAlt />
+          <BiLogoLinkedinSquare />
+          <BiLogoTwitter />
         </div>
       </div>
 

@@ -37,9 +37,8 @@ section.action {
 
         @include flex-center;
 
-        img {
-          width: 2rem;
-          filter: invert(1);
+        svg {
+          font-size: 2rem;
         }
       }
 
@@ -92,7 +91,6 @@ section.action {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100;
     font-size: 12rem;
     pointer-events: none;
 
