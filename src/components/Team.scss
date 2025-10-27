@@ -1,0 +1,64 @@
+section.team {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  margin-bottom: 6rem;
+
+  h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .title {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      max-width: 20rem;
+    }
+
+    .see-more-link {
+      // padding: 0.3rem;
+      @include flex-center;
+      gap: 0.5rem;
+      align-self: flex-end;
+      font-weight: 500;
+
+      span {
+        padding-bottom: 0.1rem;
+      }
+    }
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 20rem);
+    column-gap: 1rem;
+
+    .member-item {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &.slot-1 {
+        grid-area: 1 / 1;
+      }
+
+      &.slot-2 {
+        grid-area: 1 / 2;
+      }
+
+      &.slot-4 {
+        grid-area: 1 / 4;
+      }
+
+      &.slot-7 {
+        grid-area: 2 / 3;
+      }
+    }
+  }
+}

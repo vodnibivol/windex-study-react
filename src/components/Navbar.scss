@@ -1,0 +1,42 @@
+nav {
+  // height: 7rem;
+  padding: 2rem 1rem;
+  background: white;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+
+  @include flex-center;
+  justify-content: space-between;
+
+  .nav-left {
+    @include flex-center;
+
+    .logo {
+      @include flex-center;
+
+      img {
+        width: 3rem;
+      }
+
+      span {
+        font-size: 1.6rem;
+        margin: 0 0.6rem;
+      }
+    }
+
+    .links {
+      margin-left: 12rem;
+
+      a {
+        margin: 0 0.8rem;
+      }
+    }
+  }
+
+  .nav-right {
+    button {
+      @include button;
+    }
+  }
+}

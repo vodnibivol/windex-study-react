@@ -1,0 +1,14 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button {
+  background: black;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.3rem;
+  font-size: inherit;
+  white-space: nowrap;
+}

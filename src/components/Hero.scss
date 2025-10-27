@@ -1,0 +1,51 @@
+.hero {
+  $font-light: #999;
+
+  @include flex-center;
+  padding: 8rem 0;
+  background: url('/img/hero-gradient.png');
+  // background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .content {
+    @include flex-center;
+    gap: 1.8rem;
+    text-align: center;
+
+    max-width: 40rem;
+    flex-direction: column;
+
+    h3 {
+      @include flex-center;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.6rem;
+        background: #ff6430;
+        border-radius: 50%;
+        margin-right: 0.7rem;
+        box-shadow: 0 5px 8px #ff643088;
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: $font-light;
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+
+    button {
+      @include button;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+  }
+}

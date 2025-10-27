@@ -1,0 +1,28 @@
+import ProjectItem from './ProjectItem';
+import './Projects.scss';
+
+const Projects = () => {
+  return (
+    <div className="projects">
+      <h3 className="text-gray upper">See All Projects</h3>
+      <div className="title">
+        <h1>Diverse Solutions For Every Need</h1>
+        <div className="select">
+          <div className="select-item text-gray upper selected">All</div>
+          <div className="select-item text-gray upper">Offshore Wind Farms</div>
+          <div className="select-item text-gray upper">Onshore Wind Farms</div>
+        </div>
+      </div>
+      <div className="project-grid">
+        <ProjectItem image="turbines-4" category="Onshore Wind Farms" title="Blue Ridge Energy Park" />
+        <ProjectItem image="turbines-5" category="Offshore Wind Farms" title="Seawind Horizon Project" />
+        <ProjectItem image="turbines-6" category="Educational Project" title="WindLab Educational Center" />
+        <ProjectItem image="turbines-7" category="Research & Innovation" title="SkyHarvest Wind Farm" />
+        <ProjectItem image="turbines-8" category="Industrial Installations" title="BlueWave Offshore Project" />
+        <ProjectItem image="turbines-9" category="Educational Project" title="GreenHorizon Community Wind Park" />
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
