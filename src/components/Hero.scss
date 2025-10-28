@@ -1,8 +1,10 @@
+@use '../assets/styles/breakpoints' as bp;
+
 .hero {
   $font-light: #999;
 
   @include flex-center;
-  padding: 8rem 0;
+  padding: 8rem 2rem;
   background: url('../assets/img/hero-gradient.png');
   // background-size: 100%;
   background-size: cover;
@@ -22,8 +24,8 @@
       &::before {
         content: '';
         display: inline-block;
-        width: 0.6rem;
-        height: 0.6rem;
+        width: 0.5em;
+        height: 0.5em;
         background: #ff6430;
         border-radius: 50%;
         margin-right: 0.7rem;
@@ -46,6 +48,28 @@
       @include button;
       text-transform: uppercase;
       font-size: 0.9rem;
+    }
+
+    @include bp.tablet {
+      gap: 3rem;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 3.6rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+
+      button {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 1.5rem;
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+@use '../../assets/styles/breakpoints' as bp;
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -19,34 +21,40 @@
 
     .select {
       border: 1px solid #e5e5e5;
-      padding: 0.3rem;
       @include flex-center;
-      gap: 0.5rem;
-      align-self: flex-end;
+      justify-content: flex-start;
+      align-self: flex-end; // ALIGN!
       position: relative;
+      white-space: nowrap;
+      max-width: 100%;
+      overflow-x: hidden;
+
+      $base: 0.9rem;
+
+      font-size: $base;
+      gap: $base/2;
+      padding: $base/3;
 
       .select-slider {
         pointer-events: none;
         background: black;
         position: absolute;
-        left: 0.3rem;
+        left: $base/3;
         width: 0;
-        top: 0.3rem;
-        bottom: 0.3rem;
+        top: $base/3;
+        bottom: $base/3;
         transition: 0.2s;
         z-index: -1;
         // height: 10px;
       }
 
       .select-item {
-        padding: 0.7rem;
+        padding: $base * 0.8;
         cursor: pointer;
-        font-size: 0.9rem;
         transition: color 0.2s;
 
         &[data-selected='true'] {
           color: white;
-          // background: black;
         }
       }
     }
@@ -72,6 +80,44 @@
 
       .title {
         font-weight: 500;
+      }
+    }
+  }
+
+  @include bp.tablet {
+    > h3 {
+      font-size: 1.5rem;
+    }
+
+    .title {
+      flex-direction: column;
+
+      h1 {
+        font-size: 3.5rem;
+        max-width: 30rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+
+      .select {
+        align-self: flex-start;
+        font-size: 1.4rem;
+        padding: 0.5rem;
+      }
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(1, 1fr);
+
+      .project-item {
+        h3.category {
+          font-size: 1.5rem;
+          font-weight: 400;
+        }
+
+        h2 {
+          font-size: 2.2rem;
+        }
       }
     }
   }

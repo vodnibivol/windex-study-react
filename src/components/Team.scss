@@ -1,3 +1,5 @@
+@use '../assets/styles/breakpoints' as bp;
+
 section.team {
   display: flex;
   flex-direction: column;
@@ -19,7 +21,6 @@ section.team {
     }
 
     .see-more-link {
-      // padding: 0.3rem;
       @include flex-center;
       gap: 0.5rem;
       align-self: flex-end;
@@ -59,6 +60,35 @@ section.team {
       &.slot-7 {
         grid-area: 2 / 3;
       }
+    }
+  }
+
+  @include bp.tablet {
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    .title {
+      flex-direction: column;
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 500;
+        max-width: 30rem;
+        margin-bottom: 2rem;
+      }
+
+      .see-more-link {
+        align-self: flex-start;
+        font-size: 1.4rem;
+      }
+    }
+
+    .team-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0 3rem;
     }
   }
 }

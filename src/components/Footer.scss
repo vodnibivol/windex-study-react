@@ -1,3 +1,5 @@
+@use '../assets/styles/breakpoints' as bp;
+
 footer {
   background: black;
   color: white;
@@ -24,12 +26,13 @@ footer {
         line-height: 1.8;
         position: relative;
 
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
         svg {
           font-size: 1.5rem;
-          position: absolute;
-          left: -1.5rem;
-          top: 50%;
-          transform: translate(-50%, -50%);
+          flex-shrink: 0;
         }
       }
     }
@@ -80,6 +83,60 @@ footer {
 
     .attribution {
       font-weight: 300;
+    }
+  }
+
+  @include bp.mobile {
+    padding: 2rem;
+    padding-top: 4rem;
+
+    .top {
+      flex-direction: column;
+
+      h1 {
+        font-size: 3rem;
+        max-width: 20rem;
+        margin-bottom: 8rem;
+      }
+
+      ul {
+        width: 25rem;
+        font-size: 1.5rem;
+        font-weight: 200;
+
+        li svg {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .middle {
+      flex-direction: column;
+      font-size: 1.5rem;
+      font-weight: 200;
+
+      position: relative;
+      gap: 2rem;
+
+      .links-nav {
+        justify-content: space-between;
+        gap: unset;
+      }
+
+      .links-social {
+        font-size: 2rem;
+        gap: 2rem;
+      }
+    }
+
+    .bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.5rem;
+
+      .attribution {
+        font-size: 1.5rem;
+      }
     }
   }
 }

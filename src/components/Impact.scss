@@ -1,3 +1,5 @@
+@use '../assets/styles/breakpoints' as bp;
+
 .impact {
   @include flex-center;
 
@@ -5,22 +7,24 @@
   flex-direction: column;
   text-align: center;
 
-  h3 {
+  > h3 {
     margin-bottom: 1.5rem;
   }
 
   h2 {
     font-size: 2.4rem;
+    // margin: 0 3rem;
     margin-bottom: 4rem;
     font-weight: 500;
   }
 
   .data-strip {
-    width: 100%;
+    width: 100vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 0 3rem;
     gap: 1.5rem;
+    flex-wrap: wrap;
 
     .data-item {
       background: #fafafa;
@@ -45,7 +49,6 @@
         @include flex-center;
 
         svg {
-          width: 2rem;
           mix-blend-mode: soft-light;
         }
       }
@@ -69,19 +72,36 @@
           background: color.adjust(#4aa944, $lightness: 30%);
         }
       }
+
       &:nth-child(2) {
         .icon {
           background: color.adjust(#ff6430, $lightness: 25%);
         }
       }
+
       &:nth-child(3) {
         .icon {
           background: #ccc;
         }
       }
+
       &:nth-child(4) {
         .icon {
           background: color.adjust(#1b84ac, $lightness: 40%);
+        }
+      }
+    }
+
+    @include bp.tablet {
+      grid-template-columns: repeat(2, 1fr);
+
+      .data-item {
+        padding: 1rem;
+
+        .icon {
+          width: 4rem;
+          height: 4rem;
+          font-size: 2.2rem;
         }
       }
     }
