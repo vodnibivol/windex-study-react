@@ -66,12 +66,12 @@
 
       &:nth-child(1) {
         .icon {
-          background: lighten(#4aa944, 30);
+          background: color.adjust(#4aa944, $lightness: 30%);
         }
       }
       &:nth-child(2) {
         .icon {
-          background: lighten(#ff6430, 25);
+          background: color.adjust(#ff6430, $lightness: 25%);
         }
       }
       &:nth-child(3) {
@@ -81,7 +81,7 @@
       }
       &:nth-child(4) {
         .icon {
-          background: lighten(#1b84ac, 40);
+          background: color.adjust(#1b84ac, $lightness: 40%);
         }
       }
     }

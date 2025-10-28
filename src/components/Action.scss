@@ -4,7 +4,7 @@ section.action {
   margin-bottom: 2rem;
 
   .left {
-    width: 60%;
+    width: 55%;
     position: relative;
     height: 40rem;
 
@@ -25,8 +25,9 @@ section.action {
       position: absolute;
       top: 3rem;
       right: 3rem;
-      padding: 1rem 1rem;
+      padding: 1rem 2rem 1rem 1rem;
       color: white;
+      backdrop-filter: blur(6px);
 
       gap: 1.2rem;
 
@@ -51,14 +52,14 @@ section.action {
 
         span {
           font-weight: 300;
-          font-size: 0.9rem;
+          // font-size: 0.9rem;
         }
       }
     }
   }
 
   .right {
-    width: 40%;
+    width: 45%;
     background: #fafafa;
     padding: 2.5rem;
 

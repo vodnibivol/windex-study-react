@@ -6,9 +6,13 @@ nav {
   z-index: 100;
   top: 0;
 
-  box-shadow: 0 0 10px #00000022;
   @include flex-center;
   justify-content: space-between;
+
+  transition: box-shadow 0.3s;
+  &.shadow {
+    box-shadow: 0 0 10px #00000022;
+  }
 
   .nav-left {
     @include flex-center;

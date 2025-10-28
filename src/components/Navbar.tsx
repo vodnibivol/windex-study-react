@@ -1,8 +1,20 @@
+import { useEffect, useState } from 'react';
 import './Navbar.scss';
 
 const Navbar = () => {
+  const [shadow, setShadow] = useState(false);
+  useEffect(() => {
+    document.addEventListener('scroll', toggleNavShadow);
+
+    return () => document.removeEventListener('scroll', toggleNavShadow);
+  }, []);
+
+  function toggleNavShadow() {
+    setShadow(window.scrollY > 0);
+  }
+
   return (
-    <nav>
+    <nav className={shadow ? 'shadow' : ''}>
       <div className="nav-left">
         <div className="logo">
           <img src="/logo.svg" alt="Windex logo" />

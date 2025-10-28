@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
 
-const Select = ({ categories }: { categories: Array<string> }) => {
-  const [category, setCategory] = useState('All');
+interface selectProps {
+  categories: string[];
+  category: string;
+  setCategory: (cat: string) => void;
+}
+
+const Select = ({ categories, category, setCategory }: selectProps) => {
   const [sliderStyles, setSliderStyles] = useState({ left: 0, width: 0 });
 
   useEffect(() => {

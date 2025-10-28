@@ -9,7 +9,8 @@ export default defineConfig({
       scss: {
         additionalData: `
           @use 'sass:list';
-          @import "/src/assets/styles/_mixins";
+          @use 'sass:color';
+          @use "/src/assets/styles/_mixins" as *;
         `,
       },
     },
