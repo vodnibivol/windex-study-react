@@ -59,7 +59,7 @@ const Footer = () => {
 
       <div className="bottom">
         <div className="logo">
-          <img src="/logo.svg" alt="" />
+          <img src="./logo.svg" alt="" />
           <h1>Windex</h1>
         </div>
         <div className="attribution">© 2025 Windex Designed by Opndoo</div>

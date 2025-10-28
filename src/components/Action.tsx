@@ -1,12 +1,14 @@
 import './Action.scss';
 import { IoIosStarHalf } from 'react-icons/io';
 
+import turbines10 from '../assets/img/turbines-10.png';
+
 const Action = () => {
   return (
     <section className="action">
       <div className="left">
         <div className="img">
-          <img src="/img/turbines-10.png" alt="Wind Turbine" />
+          <img src={turbines10} alt="Wind Turbine" />
         </div>
         <div className="rating">
           <div className="icon">

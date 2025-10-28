@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className={shadow ? 'shadow' : ''}>
       <div className="nav-left">
         <div className="logo">
-          <img src="/logo.svg" alt="Windex logo" />
+          <img src="./logo.svg" alt="Windex logo" />
           <span>Windex</span>
         </div>
         <div className="links">
