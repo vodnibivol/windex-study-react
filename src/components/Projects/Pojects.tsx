@@ -33,7 +33,7 @@ const Projects = () => {
   const filteredProjects = category === 'All' ? projects : projects.filter((p) => p.category === category);
 
   return (
-    <div className="projects">
+    <section className="projects">
       <h3 className="text-gray upper">See All Projects</h3>
       <div className="title">
         <h1>Diverse Solutions For Every Need</h1>
@@ -56,7 +56,7 @@ const Projects = () => {
           ))}
         </AnimatePresence>
       </div>
-    </div>
+    </section>
   );
 };
 

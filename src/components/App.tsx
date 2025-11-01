@@ -2,7 +2,7 @@ import Action from './Action';
 import Footer from './Footer';
 import Hero from './Hero';
 import ImageStrip from './ImageStrip';
-import Impact from './Impact';
+import Impact from './Impact/Impact';
 import Navbar from './Navbar';
 import Projects from './Projects/Pojects';
 import Team from './Team';

@@ -10,7 +10,9 @@ const Hero = () => {
           Expore our portfolio of sustainable wind projects that are transforming communities and shaping cleaner
           future.
         </p>
-        <button type="button">Explore solutions</button>
+        <button type="button" onClick={() => alert('did not implement that currently:)')}>
+          Explore solutions
+        </button>
       </div>
     </div>
   );

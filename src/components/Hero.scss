@@ -6,9 +6,11 @@
   @include flex-center;
   padding: 8rem 2rem;
   background: url('../assets/img/hero-gradient.png');
-  // background-size: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1200px;
+  margin: auto;
 
   .content {
     @include flex-center;

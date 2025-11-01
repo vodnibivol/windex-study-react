@@ -14,7 +14,7 @@
 }
 
 html {
-  font-size: 1.1vw;
+  font-size: min(1.1vw, 14px);
 }
 
 // default styles
@@ -41,7 +41,16 @@ ul {
   list-style-type: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 // classes
+
+section {
+  max-width: 1200px;
+  margin: auto;
+}
 
 .text-gray {
   color: var(--text-gray);
@@ -65,26 +74,28 @@ ul {
   }
 }
 
-.underline-hover {
-  position: relative;
+@include bp.desktop {
+  .underline-hover {
+    position: relative;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.1em;
-    background: currentColor;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background: currentColor;
 
-    transition: transform 0.3s;
-    transform-origin: 100%;
-    transform: scaleX(0);
-  }
+      transition: transform 0.3s;
+      transform-origin: 100%;
+      transform: scaleX(0);
+    }
 
-  &:hover::after {
-    transform-origin: 0%;
-    transform: scaleX(1);
+    &:hover::after {
+      transform-origin: 0%;
+      transform: scaleX(1);
+    }
   }
 }
 
@@ -92,6 +103,15 @@ ul {
 
 @include bp.tablet {
   html {
-    font-size: 2.6666666667vw;
+    font-size: 1.5vw;
   }
+}
+
+@include bp.mobile {
+  html {
+    font-size: calc(8vw / 3);
+  }
+}
+
+@include bp.desktop {
 }

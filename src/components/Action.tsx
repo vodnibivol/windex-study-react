@@ -25,7 +25,7 @@ const Action = () => {
         <h3 className="text-gray upper">Call-To-Action</h3>
         <h1>Let's Build a Sustainable Tomorrow</h1>
         <p className="text-gray">Discover how our techology can help your business achieve its sustainability goals</p>
-        <button type="button" className="upper">
+        <button type="button" className="upper" onClick={() => alert('did not implement that currently:)')}>
           Get Started
         </button>
       </div>

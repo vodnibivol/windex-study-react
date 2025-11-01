@@ -1,6 +1,6 @@
 @use '../../assets/styles/breakpoints' as bp;
 
-.projects {
+section.projects {
   display: flex;
   flex-direction: column;
 
@@ -32,17 +32,17 @@
       $base: 0.9rem;
 
       font-size: $base;
-      gap: $base/2;
-      padding: $base/3;
+      gap: calc($base/2);
+      padding: calc($base/3);
 
       .select-slider {
         pointer-events: none;
         background: black;
         position: absolute;
-        left: $base/3;
+        left: calc($base/3);
         width: 0;
-        top: $base/3;
-        bottom: $base/3;
+        top: calc($base/3);
+        bottom: calc($base/3);
         transition: 0.2s;
         z-index: -1;
         // height: 10px;

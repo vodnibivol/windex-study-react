@@ -19,35 +19,35 @@ const Navbar = () => {
 
   return (
     <nav className={shadow ? 'shadow' : ''}>
-      <div className="nav-left">
-        <div className="logo">
-          <img src="./logo.svg" alt="Windex logo" />
-          <span>Windex</span>
-        </div>
-        {menuOpen && (
-          <div className="links">
-            <a href="/home" className="underline-hover">
+      <div className="content">
+        <div className="nav-left">
+          <div className="logo">
+            <img src="./logo.svg" alt="Windex logo" />
+            <span>Windex</span>
+          </div>
+          <div className={'links' + (menuOpen ? ' menu-open' : '')}>
+            <a href="#" className="underline-hover" onClick={() => alert('did not implement that currently:)')}>
               Home
             </a>
-            <a href="/about" className="underline-hover">
+            <a href="#" className="underline-hover">
               About
             </a>
-            <a href="/solutions" className="underline-hover">
+            <a href="#" className="underline-hover">
               Solutions
             </a>
-            <a href="/projects" className="underline-hover">
+            <a href="#" className="underline-hover">
               Projects
             </a>
           </div>
-        )}
-      </div>
-      <div className="nav-right">
-        <button type="button" className="contact-button">
-          Contact Us
-        </button>
-        <button type="button" className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <IoCloseOutline /> : <IoMenuOutline />}
-        </button>
+        </div>
+        <div className="nav-right">
+          <button type="button" className="contact-button" onClick={() => alert('did not implement that currently:)')}>
+            Contact Us
+          </button>
+          <button type="button" className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <IoCloseOutline /> : <IoMenuOutline />}
+          </button>
+        </div>
       </div>
     </nav>
   );

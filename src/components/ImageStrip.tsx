@@ -6,7 +6,7 @@ import turbines3 from '../assets/img/turbines-3.png';
 
 const ImageStrip = () => {
   return (
-    <div className="image-strip">
+    <section className="image-strip">
       <div className="img">
         <img src={turbines1} alt="Wind Turbine" />
       </div>
@@ -16,7 +16,7 @@ const ImageStrip = () => {
       <div className="img">
         <img src={turbines3} alt="Wind Turbine" />
       </div>
-    </div>
+    </section>
   );
 };
 

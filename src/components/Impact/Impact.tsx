@@ -5,7 +5,7 @@ import './Impact.scss';
 
 const Impact = () => {
   return (
-    <div className="impact">
+    <section className="impact">
       <h3 className="text-gray upper">Our Impact</h3>
       <h2>Turning Wind Into Measurable Change</h2>
       <div className="data-strip">
@@ -14,7 +14,7 @@ const Impact = () => {
         <DataItem icon={<IoThunderstormOutline />} title="1M+" text="Tons CO2 Saved Annually" />
         <DataItem icon={<IoBulbOutline />} title="10Y+" text="Years Experience" />
       </div>
-    </div>
+    </section>
   );
 };
 
