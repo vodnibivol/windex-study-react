@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 interface selectProps {
   categories: string[];
@@ -9,21 +9,11 @@ interface selectProps {
 const Select = ({ categories, category, setCategory }: selectProps) => {
   const [sliderStyles, setSliderStyles] = useState({ left: 0, width: 0 });
 
-  useEffect(() => {
-    setSliderPosition();
-  }, [category]);
-
-  useEffect(() => {
-    setSliderPosition();
-    window.addEventListener('resize', setSliderPosition);
-    return () => window.removeEventListener('resize', setSliderPosition);
-  }, []);
-
-  function setSliderPosition() {
+  const setSliderPosition = useCallback(() => {
     // get selected item styles
     const selectedItem = document.querySelector('.select-item[data-selected="true"]');
     const itemParent = selectedItem?.parentElement;
-    if (selectedItem instanceof HTMLElement && itemParent instanceof HTMLElement) {
+    if (selectedItem && itemParent) {
       const itemBox = selectedItem.getBoundingClientRect();
       const itemParentBox = itemParent.getBoundingClientRect();
 
@@ -32,7 +22,20 @@ const Select = ({ categories, category, setCategory }: selectProps) => {
         width: itemBox.width,
       });
     }
-  }
+  }, []);
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      // FIX: requestAnimationFrame for Safari width bug
+      setSliderPosition();
+    });
+  }, [category, setSliderPosition]);
+
+  useEffect(() => {
+    setSliderPosition();
+    window.addEventListener('resize', setSliderPosition);
+    return () => window.removeEventListener('resize', setSliderPosition);
+  }, [setSliderPosition]);
 
   return (
     <div className="select">
