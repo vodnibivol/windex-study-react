@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './Navbar.scss';
 
 import { IoCloseOutline, IoMenuOutline } from 'react-icons/io5';
+import { wipAlert } from '../helpers/Utils';
 
 const Navbar = () => {
   const [shadow, setShadow] = useState(false);
@@ -26,22 +27,22 @@ const Navbar = () => {
             <span>Windex</span>
           </div>
           <div className={'links' + (menuOpen ? ' menu-open' : '')}>
-            <a href="#" className="underline-hover" onClick={() => alert('did not implement that currently:)')}>
+            <a href="#" className="underline-hover" onClick={wipAlert}>
               Home
             </a>
-            <a href="#" className="underline-hover">
+            <a href="#" className="underline-hover" onClick={wipAlert}>
               About
             </a>
-            <a href="#" className="underline-hover">
+            <a href="#" className="underline-hover" onClick={wipAlert}>
               Solutions
             </a>
-            <a href="#" className="underline-hover">
+            <a href="#" className="underline-hover" onClick={wipAlert}>
               Projects
             </a>
           </div>
         </div>
         <div className="nav-right">
-          <button type="button" className="contact-button" onClick={() => alert('did not implement that currently:)')}>
+          <button type="button" className="contact-button" onClick={wipAlert}>
             Contact Us
           </button>
           <button type="button" className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>

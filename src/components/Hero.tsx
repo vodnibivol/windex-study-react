@@ -1,3 +1,4 @@
+import { wipAlert } from '../helpers/Utils';
 import './Hero.scss';
 
 const Hero = () => {
@@ -10,7 +11,7 @@ const Hero = () => {
           Expore our portfolio of sustainable wind projects that are transforming communities and shaping cleaner
           future.
         </p>
-        <button type="button" onClick={() => alert('did not implement that currently:)')}>
+        <button type="button" onClick={wipAlert}>
           Explore solutions
         </button>
       </div>

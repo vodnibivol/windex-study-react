@@ -1,3 +1,4 @@
+import { wipAlert } from '../helpers/Utils';
 import './Footer.scss';
 
 import {
@@ -34,19 +35,19 @@ const Footer = () => {
 
         <div className="middle">
           <div className="links-nav">
-            <a href="#" className="underline-hover">
+            <a href="#" className="underline-hover" onClick={wipAlert}>
               Home
             </a>
-            <a href="#" className="underline-hover">
+            <a href="#" className="underline-hover" onClick={wipAlert}>
               About
             </a>
-            <a href="#" className="underline-hover">
+            <a href="#" className="underline-hover" onClick={wipAlert}>
               Solutions
             </a>
-            <a href="#" className="underline-hover">
+            <a href="#" className="underline-hover" onClick={wipAlert}>
               Projects
             </a>
-            <a href="#" className="underline-hover">
+            <a href="#" className="underline-hover" onClick={wipAlert}>
               Blog
             </a>
           </div>

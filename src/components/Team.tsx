@@ -4,6 +4,7 @@ import team1 from '../assets/img/team-1.png';
 import team2 from '../assets/img/team-2.png';
 import team3 from '../assets/img/team-3.png';
 import team4 from '../assets/img/team-4.png';
+import { wipAlert } from '../helpers/Utils';
 
 const Team = () => {
   return (
@@ -12,7 +13,7 @@ const Team = () => {
       <div className="title">
         <h1>Experts Dedicated to a Sustainable Future</h1>
         <div className="see-more-link">
-          <a href="#">
+          <a href="#" onClick={wipAlert}>
             <span className="upper underline">See All Members</span>
           </a>
         </div>

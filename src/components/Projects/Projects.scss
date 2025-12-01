@@ -27,9 +27,16 @@ section.projects {
       position: relative;
       white-space: nowrap;
       max-width: 100%;
-      overflow-x: hidden;
+      overflow-x: scroll;
 
-      $base: 0.9rem;
+      // SCROLL
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      $base: 0.9rem; // font size => then calculated
 
       font-size: $base;
       gap: calc($base/2);

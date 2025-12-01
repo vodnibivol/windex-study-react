@@ -11,15 +11,11 @@ const Select = ({ categories, category, setCategory }: selectProps) => {
 
   const setSliderPosition = useCallback(() => {
     // get selected item styles
-    const selectedItem = document.querySelector('.select-item[data-selected="true"]');
-    const itemParent = selectedItem?.parentElement;
-    if (selectedItem && itemParent) {
-      const itemBox = selectedItem.getBoundingClientRect();
-      const itemParentBox = itemParent.getBoundingClientRect();
-
+    const selectedItem: HTMLElement | null = document.querySelector('.select-item[data-selected="true"]');
+    if (selectedItem !== null) {
       setSliderStyles({
-        left: itemBox.left - itemParentBox.left,
-        width: itemBox.width,
+        left: selectedItem.offsetLeft,
+        width: selectedItem.offsetWidth,
       });
     }
   }, []);
